@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Like Me ?</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 20px #38bdf8;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .yes {
+            background: #22c55e;
+            color: white;
+        }
+
+        .yes:hover {
+            background: #16a34a;
+        }
+
+        .no {
+            background: #ef4444;
+            color: white;
+            position: relative;
+        }
+
+        .no:hover {
+            transform: scale(0.8);
+            opacity: 0.6;
+        }
+
+        /* Hidden messages */
+        #yes-message, #no-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        /* Show messages using :target */
+        #yes:target ~ #yes-message {
+            display: block;
+            color: #22c55e;
+        }
+
+        #no:target ~ #no-message {
+            display: block;
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💻 Relationship Debugger</h1>
+    <p>System Check: <br> Do you like me Seemi Jii? 🤔</p>
+
+    <a href="#yes" class="btn yes">Yes 💚</a>
+    <a href="#no" class="btn no">No 💔</a>
+
+    <div id="yes"></div>
+    <div id="no"></div>
+
+    <div id="yes-message">
+        ✅ SUCCESS: Crush.exe has accepted your proposal 😍<br>
+        Now come to Shimla Chito Chito
+    </div>
+
+    <div id="no-message">
+        ❌ ERROR 404: Feelings not found 😭<br>
+        Chote bache ka dil toot gaya , Jao ab Kisi Mote Uncle se shadi karo💔
+    </div>
+</div>
+
+</body>
+</html>
